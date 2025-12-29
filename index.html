@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boost Marine — профессиональный ремонт яхт, катеров и гидроциклов</title>
+  
+  <!-- Фонт Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Иконки FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Swiper для слайдера -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  
+  <!-- Основные стили -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+  
+  <!-- ==================== ШАПКА САЙТА ==================== -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <!-- Логотип -->
+        <a href="#" class="logo">
+          <img src="./assets/logo2.png" alt="Boost Marine" class="logo__img">
+          <div class="logo__text">
+            <span class="logo__top">BOOST</span>
+            <span class="logo__bottom">MARINE</span>
+          </div>
+        </a>
+        
+        <!-- Навигация -->
+        <nav class="nav">
+          <a href="#services" class="nav__link">Услуги</a>
+          <a href="#works" class="nav__link">Работы</a>
+          <a href="#team" class="nav__link">Команда</a>
+          <a href="#contacts" class="nav__link">Контакты</a>
+        </nav>
+        
+        <!-- Контакты -->
+        <div class="header-contacts">
+          <span class="header-tagline">Выезд без ограничений</span>
+          <a href="tel:+123456789" class="header-phone">+1 234 567 89</a>
+          <div class="header-social">
+            <a href="https://t.me/boostmarine" class="social-icon" target="_blank" aria-label="Telegram">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://wa.me/123456789" class="social-icon" target="_blank" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Кнопка меню для мобильных -->
+        <button class="menu-toggle" aria-label="Открыть меню">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== ГЛАВНЫЙ ЭКРАН (HERO) ==================== -->
+  <section class="hero">
+    <div class="hero__container">
+      <!-- Левая часть - ЯХТЫ -->
+      <div class="hero__half hero__half--yacht" style="background-image: url('./assets/file2.png');">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+          <h2 class="hero__title">Яхты & Катера</h2>
+          
+          <!-- Десктопная версия списка услуг -->
+          <ul class="hero__list hero__list--desktop">
+            <li class="hero__list-item">
+              <a href="#yacht-slider" class="hero__link">
+                <i class="fas fa-wrench hero__icon"></i>
+                <span>Ремонт и ТО</span>
+              </a>
+            </li>
+            <li class="hero__list-item">
+              <a href="#yacht-slider" class="hero__link">
+                <i class="fas fa-tools hero__icon"></i>
+                <span>Дооснащение</span>
+              </a>
+            </li>
+            <li class="hero__list-item">
+              <a href="#yacht-slider" class="hero__link">
+                <i class="fas fa-search hero__icon"></i>
+                <span>Диагностика</span>
+              </a>
+            </li>
+            <li class="hero__list-item">
+              <a href="#yacht-slider" class="hero__link">
+                <i class="fas fa-cogs hero__icon"></i>
+                <span>Оборудование</span>
+              </a>
+            </li>
+            <li class="hero__list-item">
+              <a href="#yacht-slider" class="hero__link">
+                <i class="fas fa-couch hero__icon"></i>
+                <span>Интерьер</span>
+              </a>
+            </li>
+            <li class="hero__list-item">
+              <a href="#yacht-slider" class="hero__link">
+                <i class="fas fa-snowflake hero__icon"></i>
+                <span>Консервация</span>
+              </a>
+            </li>
+          </ul>
+          
+          <!-- Мобильная версия - кнопка -->
+          <a href="#yacht-slider" class="hero__btn hero__btn--mobile">
+            <span>Смотреть услуги</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Правая часть - ГИДРОЦИКЛЫ -->
+      <div class="hero__half hero__half--jet" style="background-image: url('assets/file1.png');">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+          <h2 class="hero__title">Гидроциклы</h2>
+          
+          <!-- Десктопная версия списка услуг -->
+          <ul class="hero__list hero__list--desktop">
+            <li class="hero__list-item">
+              <a href="#jet-slider" class="hero__link">
+                <i class="fas fa-wrench hero__icon"></i>
+                <span>Ремонт и ТО</span>
+              </a>
+            </li>
+            <li class="hero__list-item">
+              <a href="#jet-slider" class="hero__link">
+                <i class="fas fa-search hero__icon"></i>
+                <span>Диагностика</span>
+              </a>
+            </li>
+            <li class="hero__list-item">
+              <a href="#jet-slider" class="hero__link">
+                <i class="fas fa-snowflake hero__icon"></i>
+                <span>Консервация</span>
+              </a>
+            </li>
+          </ul>
+          
+          <!-- Мобильная версия - кнопка -->
+          <a href="#jet-slider" class="hero__btn hero__btn--mobile">
+            <span>Смотреть услуги</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Стрелка для скролла -->
+    <div class="hero__scroll">
+      <span>Листайте вниз</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ==================== УСЛУГИ ==================== -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Наши услуги</h2>
+        <p class="section-subtitle">Профессиональный ремонт и обслуживание водной техники</p>
+      </div>
+      
+      <!-- Яхты и катера -->
+      <div class="service-category">
+        <h3 class="service-category__title">
+          <i class="fas fa-ship"></i>
+          Яхты и Катера
+        </h3>
+        
+        <!-- Swiper слайдер для яхт -->
+        <div id="yacht-slider" class="swiper services-slider">
+          <div class="swiper-wrapper">
+            <!-- Слайд 1 -->
+            <div class="swiper-slide service-slide">
+              <div id="yacht-repair" class="service-card">
+                <div class="service-card__image">
+                  <img src="./assets/Фото будет позже.png" alt="Ремонт и ТО яхт">
+                  <div class="service-card__overlay"></div>
+                </div>
+                <div class="service-card__content">
+                  <h4 class="service-card__title">Ремонт и ТО</h4>
+                  <p class="service-card__description">
+                    Профессиональное обслуживание судовых двигателей, плановое ТО и восстановительные работы любой сложности.
+                  </p>
+                  <ul class="service-card__features">
+                    <li>Ремонт двигателей Volvo/Yanmar</li>
+                    <li>Обслуживание дизельных систем</li>
+                    <li>Замена масла и фильтров</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Слайд 2 -->
+            <div class="swiper-slide service-slide">
+              <div id="yacht-equipment" class="service-card">
+                <div class="service-card__image">
+                  <img src="./assets/Фото будет позже.png" alt="Дооснащение яхт">
+                  <div class="service-card__overlay"></div>
+                </div>
+                <div class="service-card__content">
+                  <h4 class="service-card__title">Дооснащение</h4>
+                  <p class="service-card__description">
+                    Установка дополнительного оборудования: электронные системы, аудио, освещение и навигация.
+                  </p>
+                  <ul class="service-card__features">
+                    <li>Монтаж эхолотов и радаров</li>
+                    <li>Установка аудиосистем</li>
+                    <li>Светодиодное освещение</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Слайд 3 -->
+            <div class="swiper-slide service-slide">
+              <div id="yacht-diagnostics" class="service-card">
+                <div class="service-card__image">
+                  <img src="./assets/Фото будет позже.png" alt="Диагностика яхт">
+                  <div class="service-card__overlay"></div>
+                </div>
+                <div class="service-card__content">
+                  <h4 class="service-card__title">Диагностика</h4>
+                  <p class="service-card__description">
+                    Полная диагностика всех узлов и систем с выездом на воду. Современное диагностическое оборудование.
+                  </p>
+                  <ul class="service-card__features">
+                    <li>Компьютерная диагностика</li>
+                    <li>Проверка электроники</li>
+                    <li>Тестирование систем</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Слайд 4 -->
+            <div class="swiper-slide service-slide">
+              <div id="yacht-accessories" class="service-card">
+                <div class="service-card__image">
+                  <img src="./assets/Фото будет позже.png" alt="Оборудование для яхт">
+                  <div class="service-card__overlay"></div>
+                </div>
+                <div class="service-card__content">
+                  <h4 class="service-card__title">Оборудование</h4>
+                  <p class="service-card__description">
+                    Поставляем оригинальные запчасти и оборудование для яхт и катеров от ведущих производителей.
+                  </p>
+                  <ul class="service-card__features">
+                    <li>Оригинальные запчасти</li>
+                    <li>Навигационное оборудование</li>
+                    <li>Спасательные средства</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Слайд 5 -->
+            <div class="swiper-slide service-slide">
+              <div id="yacht-interior" class="service-card">
+                <div class="service-card__image">
+                  <img src="./assets/Фото будет позже.png" alt="Интерьер яхт">
+                  <div class="service-card__overlay"></div>
+                </div>
+                <div class="service-card__content">
+                  <h4 class="service-card__title">Интерьер</h4>
+                  <p class="service-card__description">
+                    Работы по модернизации и обновлению интерьера судна. Качественные материалы и индивидуальный подход.
+                  </p>
+                  <ul class="service-card__features">
+                    <li>Обновление салона</li>
+                    <li>Замена обивки</li>
+                    <li>Изготовление мебели</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Слайд 6 -->
+            <div class="swiper-slide service-slide">
+              <div id="yacht-preservation" class="service-card">
+                <div class="service-card__image">
+                  <img src="./assets/Фото будет позже.png" alt="Консервация яхт">
+                  <div class="service-card__overlay"></div>
+                </div>
+                <div class="service-card__content">
+                  <h4 class="service-card__title">Консервация</h4>
+                  <p class="service-card__description">
+                    Подготовка к зимнему хранению и сохранение ресурса яхты. Комплексная защита от коррозии и повреждений.
+                  </p>
+                  <ul class="service-card__features">
+                    <li>Зимнее хранение</li>
+                    <li>Антикоррозийная обработка</li>
+                    <li>Консервация двигателя</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Навигация слайдера -->
+          <div class="swiper-button-next swiper-button-next--services"></div>
+          <div class="swiper-button-prev swiper-button-prev--services"></div>
+        </div>
+      </div>
+      
+      <!-- Гидроциклы -->
+      <div class="service-category">
+        <h3 class="service-category__title">
+          <i class="fas fa-water"></i>
+          Гидроциклы
+        </h3>
+        
+        <!-- Swiper слайдер для гидроциклов -->
+        <div id="jet-slider" class="swiper services-slider">
+          <div class="swiper-wrapper">
+            <!-- Слайд 1 -->
+            <div class="swiper-slide service-slide">
+              <div id="jet-repair" class="service-card">
+                <div class="service-card__image">
+                  <img src="./assets/Фото будет позже.png" alt="Ремонт гидроциклов">
+                  <div class="service-card__overlay"></div>
+                </div>
+                <div class="service-card__content">
+                  <h4 class="service-card__title">Ремонт и ТО</h4>
+                  <p class="service-card__description">
+                    Обслуживание двигателей, подвески, суперчарджеров и других узлов гидроцикла. Качественный ремонт любой сложности.
+                  </p>
+                  <ul class="service-card__features">
+                    <li>Ремонт двигателей</li>
+                    <li>Замена масла и фильтров</li>
+                    <li>Настройка карбюраторов</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Слайд 2 -->
+            <div class="swiper-slide service-slide">
+              <div id="jet-diagnostics" class="service-card">
+                <div class="service-card__image">
+                  <img src="./assets/Фото будет позже.png" alt="Диагностика гидроциклов">
+                  <div class="service-card__overlay"></div>
+                </div>
+                <div class="service-card__content">
+                  <h4 class="service-card__title">Диагностика</h4>
+                  <p class="service-card__description">
+                    Поиск неисправностей, диагностика электроники и механики гидроциклов. Быстрое выявление проблем.
+                  </p>
+                  <ul class="service-card__features">
+                    <li>Диагностика электроники</li>
+                    <li>Проверка компрессии</li>
+                    <li>Тестирование систем</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Слайд 3 -->
+            <div class="swiper-slide service-slide">
+              <div id="jet-preservation" class="service-card">
+                <div class="service-card__image">
+                  <img src="./assets/Фото будет позже.png" alt="Консервация гидроциклов">
+                  <div class="service-card__overlay"></div>
+                </div>
+                <div class="service-card__content">
+                  <h4 class="service-card__title">Консервация</h4>
+                  <p class="service-card__description">
+                    Подготовка техники к зимнему сезону и хранение гидроциклов. Гарантия сохранности вашего оборудования.
+                  </p>
+                  <ul class="service-card__features">
+                    <li>Консервация на зиму</li>
+                    <li>Слив воды из системы</li>
+                    <li>Антикоррозийная обработка</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Навигация слайдера -->
+          <div class="swiper-button-next swiper-button-next--services"></div>
+          <div class="swiper-button-prev swiper-button-prev--services"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== НАШИ РАБОТЫ (СЛАЙДЕР) ==================== -->
+  <section id="works" class="works">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Наши работы</h2>
+        <p class="section-subtitle">Реальные примеры выполненных проектов</p>
+      </div>
+      
+      <div class="swiper works-slider">
+        <div class="swiper-wrapper">
+          <!-- Слайды -->
+          <div class="swiper-slide work-slide">
+            <img src="assets/Фото будет позже.png" alt="Выполненная работа 1" class="work-slide__image">
+            <div class="work-slide__overlay">
+              <h3 class="work-slide__title">Ремонт двигателя яхты</h3>
+              <p class="work-slide__description">Полная замена поршневой группы двигателя Volvo Penta</p>
+            </div>
+          </div>
+          
+          <div class="swiper-slide work-slide">
+            <img src="assets/Фото будет позже.png" alt="Выполненная работа 2" class="work-slide__image">
+            <div class="work-slide__overlay">
+              <h3 class="work-slide__title">Обновление интерьера катера</h3>
+              <p class="work-slide__description">Полная перетяжка салона и замена обивки</p>
+            </div>
+          </div>
+          
+          <div class="swiper-slide work-slide">
+            <img src="assets/Фото будет позже.png" alt="Выполненная работа 3" class="work-slide__image">
+            <div class="work-slide__overlay">
+              <h3 class="work-slide__title">Ремонт гидроцикла Sea-Doo</h3>
+              <p class="work-slide__description">Замена суперчарджера и ремонт системы охлаждения</p>
+            </div>
+          </div>
+          
+          <div class="swiper-slide work-slide">
+            <img src="assets/Фото будет позже.png" alt="Выполненная работа 4" class="work-slide__image">
+            <div class="work-slide__overlay">
+              <h3 class="work-slide__title">Установка навигационного оборудования</h3>
+              <p class="work-slide__description">Монтаж радара, эхолота и GPS-навигации</p>
+            </div>
+          </div>
+          
+          <div class="swiper-slide work-slide">
+            <img src="assets/Фото будет позже.png" alt="Выполненная работа 5" class="work-slide__image">
+            <div class="work-slide__overlay">
+              <h3 class="work-slide__title">Диагностика электрики яхты</h3>
+              <p class="work-slide__description">Поиск и устранение неисправностей в электросистеме</p>
+            </div>
+          </div>
+          
+          <div class="swiper-slide work-slide">
+            <img src="assets/Фото будет позже.png" alt="Выполненная работа 6" class="work-slide__image">
+            <div class="work-slide__overlay">
+              <h3 class="work-slide__title">Консервация катера на зиму</h3>
+              <p class="work-slide__description">Комплексная подготовка к зимнему хранению</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Навигация слайдера -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        
+        <!-- Пагинация -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== КОМАНДА ==================== -->
+  <section id="team" class="team">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Наша команда</h2>
+        <p class="section-subtitle">Профессионалы с многолетним опытом работы</p>
+      </div>
+      
+      <div class="team-grid">
+        <!-- Члены команды -->
+        <div class="team-member">
+          <div class="team-member__photo">
+            <img src="assets/Команда 1.png" alt="Миша">
+            <div class="team-member__social">
+              <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="team-member__info">
+            <h3 class="team-member__name">Миша</h3>
+            <p class="team-member__position">Главный инженер</p>
+            <p class="team-member__experience">5 лет опыта</p>
+            <p class="team-member__description">
+              Специалист по ремонту 
+            </p>
+          </div>
+        </div>
+        
+        <div class="team-member">
+          <div class="team-member__photo">
+            <img src="assets/команда 2.png" alt="Паша">
+            <div class="team-member__social">
+              <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="team-member__info">
+            <h3 class="team-member__name">Паша</h3>
+            <p class="team-member__position">Электрик-электронщик</p>
+            <p class="team-member__experience">5 лет опыта</p>
+            <p class="team-member__description">
+              Специалист по ремонту 
+            </p>
+          </div>
+        </div>
+        
+        <div class="team-member">
+          <div class="team-member__photo">
+            <img src="assets/Команда 3.png" alt="Гоша">
+            <div class="team-member__social">
+              <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="team-member__info">
+            <h3 class="team-member__name">Гоша</h3>
+            <p class="team-member__position">Моторист-гидравлик</p>
+            <p class="team-member__experience">5 лет опыта</p>
+            <p class="team-member__description">
+              Специалист по ремонту
+            </p>
+          </div>
+        </div>
+        
+        <div class="team-member">
+          <div class="team-member__photo">
+            <img src="assets/Команда 4.png" alt="Паша">
+            <div class="team-member__social">
+              <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="team-member__info">
+            <h3 class="team-member__name">Паша</h3>
+            <p class="team-member__position">Руководитель проекта</p>
+            <p class="team-member__experience">5 лет опыта</p>
+            <p class="team-member__description">
+              Координация работ
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ВЫЕЗДНАЯ РАБОТА ==================== -->
+  <section id="onsite" class="onsite">
+    <div class="onsite__bg" style="background-image: url('assets/logo1.png');"></div>
+    <div class="onsite__overlay"></div>
+    
+    <div class="container">
+      <div class="onsite__content">
+        <h2 class="onsite__title">Выездная работа</h2>
+        <div class="onsite__text">
+          <p>Мы приезжаем туда, где нужна ваша техника. Срочный выезд мастеров для диагностики, ремонта и обслуживания яхт, катеров и гидроциклов прямо на воде.</p>
+          
+          <div class="onsite__features">
+            <div class="onsite-feature">
+              <i class="fas fa-clock onsite-feature__icon"></i>
+              <div class="onsite-feature__content">
+                <h4>Срочный выезд</h4>
+                <p>Выезд мастера в течение 2-х часов</p>
+              </div>
+            </div>
+            
+            <div class="onsite-feature">
+              <i class="fas fa-map-marker-alt onsite-feature__icon"></i>
+              <div class="onsite-feature__content">
+                <h4>Без ограничений</h4>
+                <p>Работаем по всему региону и за его пределами</p>
+              </div>
+            </div>
+            
+            <div class="onsite-feature onsite-feature--wide">
+              <i class="fas fa-tools onsite-feature__icon"></i>
+              <div class="onsite-feature__content">
+                <h4>Полный комплект оборудования</h4>
+                <p>Привозим все необходимое оборудование для ремонта любой сложности прямо на место</p>
+              </div>
+            </div>
+          </div>
+          
+          <a href="tel:+123456789" class="btn btn--primary onsite__btn">
+            <i class="fas fa-phone"></i>
+            Вызвать мастера
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== КОНТАКТЫ ==================== -->
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Контакты</h2>
+        <p class="section-subtitle">Свяжитесь с нами удобным способом</p>
+      </div>
+      
+      <div class="contacts-grid">
+        <!-- Контактная информация -->
+        <div class="contacts-info">
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-item__content">
+              <h4>Адрес</h4>
+              <p>Essen, North Rhine‑Westphalia, Germany</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-item__content">
+              <h4>Телефон</h4>
+              <a href="tel:+123456789">+1 234 567 89</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-item__content">
+              <h4>Email</h4>
+              <a href="mailto:info@boostmarine.com">info@boostmarine.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="contact-item__content">
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/123456789" target="_blank">Написать в WhatsApp</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <i class="fab fa-telegram"></i>
+            </div>
+            <div class="contact-item__content">
+              <h4>Telegram</h4>
+              <a href="https://t.me/boostmarine" target="_blank">Написать в Telegram</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-item__content">
+              <h4>Режим работы</h4>
+              <p>Пн-Пт: 9:00-20:00</p>
+              <p>Сб-Вс: 10:00-18:00</p>
+              <p class="contact-note">Выезд без ограничений по времени</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Карта -->
+        <div class="contacts-map">
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2489.784550467043!2d6.991158315756189!3d51.45847937961942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8e3f0b6b6b6b7%3A0x1b0b0b0b0b0b0b0b!2sEssen%2C%20Germany!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy"
+              title="Карта местоположения Boost Marine">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ФУТЕР ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__logo">
+          <a href="#" class="logo">
+            <img src="assets/logo2.png" alt="Boost Marine" class="logo__img">
+            <div class="logo__text">
+              <span class="logo__top">BOOST</span>
+              <span class="logo__bottom">MARINE</span>
+            </div>
+          </a>
+          <p class="footer__tagline">Профессиональный ремонт водной техники</p>
+        </div>
+        
+        <div class="footer__nav">
+          <h4 class="footer__title">Навигация</h4>
+          <a href="#services" class="footer__link">Услуги</a>
+          <a href="#works" class="footer__link">Работы</a>
+          <a href="#team" class="footer__link">Команда</a>
+          <a href="#contacts" class="footer__link">Контакты</a>
+        </div>
+        
+        <div class="footer__services">
+          <h4 class="footer__title">Услуги</h4>
+          <a href="#yacht-slider" class="footer__link">Ремонт яхт</a>
+          <a href="#yacht-slider" class="footer__link">Обслуживание катеров</a>
+          <a href="#jet-slider" class="footer__link">Ремонт гидроциклов</a>
+          <a href="#onsite" class="footer__link">Выездная диагностика</a>
+        </div>
+        
+        <div class="footer__contacts">
+          <h4 class="footer__title">Контакты</h4>
+          <a href="tel:+123456789" class="footer__link">+1 234 567 89</a>
+          <a href="mailto:info@boostmarine.com" class="footer__link">info@boostmarine.com</a>
+          <div class="footer__social">
+            <a href="https://t.me/boostmarine" class="social-icon" target="_blank">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://wa.me/123456789" class="social-icon" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com/boostmarine" class="social-icon" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Boost Marine. Все права защищены.</p>
+        <p class="footer__note">Выезд без ограничений по региону</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  
+  <!-- Основной скрипт -->
+  <script src="script.js"></script>
+</body>
+</html>
