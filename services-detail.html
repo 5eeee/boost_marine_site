@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги | Boost Marine — профессиональный ремонт яхт, катеров и гидроциклов</title>
+  
+  <!-- Фонт Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Иконки FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Основные стили -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Стили для страницы услуг -->
+  <link rel="stylesheet" href="services-detail.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+  
+  <!-- ==================== ВИДЖЕТ TELEGRAM ==================== -->
+  <div class="telegram-widget">
+    <a href="https://t.me/boostmarine" target="_blank" class="telegram-link" aria-label="Наш Telegram канал">
+      <i class="fab fa-telegram"></i>
+      <span class="telegram-text">Наш канал</span>
+    </a>
+  </div>
+
+  <!-- ==================== ШАПКА САЙТА ==================== -->
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      
+      <!-- Логотип -->
+      <a class="logo" href="index.html">
+        <picture>
+          <source srcset="assets/logo-mobile.png" width="60" height="60" media="(max-width: 768px)">
+          <img src="assets/logo2.png" alt="Boost Marine" width="180" height="47">
+        </picture>
+      </a>
+
+      <!-- Дополнительное меню для десктопа -->
+      <nav class="additional-menu">
+        <a class="item" href="index.html#works">Работы</a>
+        <a class="item" href="index.html#team">Команда</a>
+        <a class="item active" href="services-detail.html">Услуги</a>
+      </nav>
+
+      <div class="header-right">
+        
+        <!-- Блок контактов менеджера -->
+        <div class="manager-contact">
+          <div class="btn btn--contact js-btn-contact">
+            Связь <span>с менеджером</span>
+          </div>
+
+          <div class="contact-form-window">
+            <div class="form-window-close js-form-window-close"></div>
+            
+            <div class="title">Выберите способ связи</div>
+            
+            <div class="socials">
+              <a href="tel:+123456789" class="phone-icon">
+                <i class="fas fa-phone"></i>
+              </a>
+              
+              <a href="https://wa.me/123456789" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://t.me/boostmarine" target="_blank">
+                <i class="fab fa-telegram"></i>
+              </a>
+              <a href="mailto:info@boostmarine.com" target="_blank" class="mail">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+            
+            <div class="title">или оставьте заявку</div>
+            
+            <form class="callback-form" method="post">
+              <input type="hidden" name="form_type" value="callback">
+              
+              <div class="form-fields">
+                <input type="text" name="name" placeholder="Имя" required>
+                <input class="phone-mask" type="tel" name="phone" placeholder="Телефон" required>
+              </div>
+
+              <button type="submit" class="btn btn--submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Контакты (для десктопа) -->
+        <div class="contacts">
+          <i class="fas fa-phone"></i>
+          <div class="contact-links">
+            <a href="tel:+123456789">+1 234 567 89</a>
+            <span class="contact-note">Выезд без ограничений</span>
+            <a href="mailto:info@boostmarine.com">info@boostmarine.com</a>
+          </div>
+        </div>
+
+        <!-- Кнопка "Связь" для мобильной версии -->
+        <a href="#" class="mobile-contact-btn js-mobile-contact">
+          <i class="fas fa-phone"></i>
+          <span>Связь</span>
+        </a>
+
+        <!-- Кнопка меню (бургер) -->
+        <div class="menu-toggle">
+          <span class="menu-text">Меню</span>
+          <i class="fas fa-bars"></i>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Основное меню -->
+    <nav class="main-menu">
+      <div class="menu-content">
+        <div class="menu-close js-menu-close">
+          <i class="fas fa-times"></i>
+        </div>
+        
+        <div class="menu-links">
+          <a href="services-detail.html" class="menu-link active">Услуги</a>
+          <a href="index.html#works" class="menu-link">Работы</a>
+          <a href="index.html#team" class="menu-link">Команда</a>
+          <a href="index.html#equipment" class="menu-link">Оборудование</a>
+          <a href="index.html#onsite" class="menu-link">Выездная работа</a>
+          <a href="index.html#contacts" class="menu-link">Контакты</a>
+        </div>
+
+        <div class="menu-contacts">
+          <a href="tel:+123456789" class="menu-phone">+1 234 567 89</a>
+          <a href="mailto:info@boostmarine.com" class="menu-email">info@boostmarine.com</a>
+          
+          <div class="menu-socials">
+            <a href="https://wa.me/123456789" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://t.me/boostmarine" target="_blank">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://instagram.com/boostmarine" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+  </div>
+</header>
+
+  <!-- ==================== ХЛЕБНЫЕ КРОШКИ ==================== -->
+  <section class="breadcrumbs">
+    <div class="container">
+      <nav class="breadcrumbs-nav">
+        <a href="index.html" class="breadcrumbs-link">Главная</a>
+        <span class="breadcrumbs-separator">/</span>
+        <span class="breadcrumbs-current">Услуги</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ==================== ОСНОВНОЕ СОДЕРЖИМОЕ СТРАНИЦЫ УСЛУГ ==================== -->
+  <main class="services-detail-page">
+    <div class="container">
+      <!-- Заголовок страницы -->
+      <div class="page-header">
+        <h1 class="page-title">Наши услуги</h1>
+        <p class="page-subtitle">Полный спектр профессиональных услуг по ремонту и обслуживанию водной техники</p>
+      </div>
+
+      <!-- Боковая навигация (для десктопа) -->
+      <div class="services-detail-layout">
+        <aside class="services-sidebar">
+          <div class="services-nav">
+            <div class="services-nav-title">Направления услуг</div>
+            <nav class="services-nav-list">
+              <a href="#service1" class="services-nav-link active">Ремонт и техническое обслуживание</a>
+              <a href="#service2" class="services-nav-link">Дооснащение, модернизация и инженерные системы</a>
+              <a href="#service3" class="services-nav-link">Диагностика технического состояния</a>
+              <a href="#service4" class="services-nav-link">Помощь в покупке и подборе</a>
+              <a href="#service5" class="services-nav-link">Консервация и сезонное обслуживание</a>
+              <a href="#service6" class="services-nav-link">Ремонт гидроциклов</a>
+              <a href="#service7" class="services-nav-link">Иные услуги</a>
+            </nav>
+          </div>
+
+          <!-- Кнопка заказа услуги -->
+          <div class="sidebar-cta">
+            <p>Нужна консультация или расчет стоимости?</p>
+            <button class="btn btn--primary sidebar-cta-btn js-sidebar-callback">
+              <i class="fas fa-phone"></i>
+              Заказать звонок
+            </button>
+          </div>
+        </aside>
+
+        <!-- Основной контент -->
+        <div class="services-content">
+          <!-- Раздел 1: Ремонт и техническое обслуживание -->
+          <section id="service1" class="service-section">
+            <div class="service-section-header">
+              <h2 class="service-section-title">Ремонт и техническое обслуживание</h2>
+              <div class="service-section-icon">
+                <i class="fas fa-wrench"></i>
+              </div>
+            </div>
+
+            <div class="service-subcategories">
+              <!-- Подраздел 1.1 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Плановое техническое обслуживание двигателя и трансмиссии">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Плановое техническое обслуживание двигателя и трансмиссии</h3>
+                  <div class="service-subcategory-text">
+                    <p>Работы выполняются строго по регламенту производителя. Перечень операций и стоимость согласуются заранее и не меняются в процессе. Используются проверенные расходные материалы. По завершении клиент получает исправную технику с понятным перечнем выполненных работ и рекомендациями по дальнейшей эксплуатации.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 1.2 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Поиск и устранение неисправностей двигателя">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Поиск и устранение неисправностей двигателя</h3>
+                  <div class="service-subcategory-text">
+                    <p>Сначала определяется фактическая причина неисправности, после чего принимается решение о ремонте. Замены выполняются только при подтвержденной необходимости. Клиент получает понятное объяснение проблемы, список работ и фиксированную стоимость до начала выполнения.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 1.3 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Восстановление после простоев и нештатных ситуаций">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Восстановление после простоев и нештатных ситуаций</h3>
+                  <div class="service-subcategory-text">
+                    <p>Устраняются последствия длительного хранения, перегрева, проблем с топливом и системой охлаждения. Цель не кратковременный запуск, а восстановление ресурса и стабильной работы техники без скрытых рисков.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 1.4 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Капитальный ремонт и восстановление ресурса">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Капитальный ремонт и восстановление ресурса</h3>
+                  <div class="service-subcategory-text">
+                    <p>Проводится полная разборка и оценка состояния узлов. Работы выполняются только при технической и экономической целесообразности. Если капитальный ремонт не оправдан, клиент получает честное заключение и альтернативные варианты решений. Объем работ, сроки и результат понятны заранее.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 1.5 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Тестирование после работ и приемка">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Тестирование после работ и приемка</h3>
+                  <div class="service-subcategory-text">
+                    <p>После ремонта техника проверяется в рабочих режимах: запуск, прогрев, нагрузка, герметичность, стабильность параметров. По итогам предоставляется отчет о выполненных работах, состоянии ключевых узлов и рекомендациях по дальнейшему обслуживанию.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 1.6 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Обслуживание на месте базирования">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Обслуживание на месте базирования</h3>
+                  <div class="service-subcategory-text">
+                    <p>Диагностика и регламентные работы выполняются без транспортировки судна, если это не снижает качество и безопасность. Формат применяется только тогда, когда он технически оправдан.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Раздел 2: Дооснащение, модернизация и инженерные системы -->
+          <section id="service2" class="service-section">
+            <div class="service-section-header">
+              <h2 class="service-section-title">Дооснащение, модернизация и инженерные системы</h2>
+              <div class="service-section-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+            </div>
+
+            <div class="service-subcategories">
+              <!-- Подраздел 2.1 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Навигация и управление">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Навигация и управление</h3>
+                  <div class="service-subcategory-text">
+                    <p>Установка и настройка картплоттеров, эхолотов, радаров, автопилотов, датчиков и сетей NMEA. Все системы объединяются в единый контур, корректно взаимодействуют между собой и остаются удобными для дальнейшего обслуживания и диагностики.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 2.2 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Судовая электрика и питание">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Судовая электрика и питание</h3>
+                  <div class="service-subcategory-text">
+                    <p>Проектирование и монтаж аккумуляторных систем, зарядных устройств, берегового питания, инверторов и распределительных щитов. Нагрузка рассчитывается заранее. Защита линий и логика подключения обеспечивают стабильную работу без непредсказуемых отказов.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 2.3 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Рулевое управление и манёвренность">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Рулевое управление и манёвренность</h3>
+                  <div class="service-subcategory-text">
+                    <p>Обслуживание и модернизация рулевых систем, установка гидравлического рулевого управления, установка дополнительных подруливающих устройств, устранение люфтов и неточностей. Управляемость становится предсказуемой, реакции судна стабильными, уровень безопасности повышается.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 2.4 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Климат и комфорт">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Климат и комфорт</h3>
+                  <div class="service-subcategory-text">
+                    <p>Установка и обслуживание отопителей, кондиционеров и вентиляции. Оборудование подбирается под реальные условия эксплуатации и объем судна. Системы работают стабильно и не требуют регулярной корректировки.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 2.5 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Водяные и санитарные системы">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Водяные и санитарные системы</h3>
+                  <div class="service-subcategory-text">
+                    <p>Монтаж и обслуживание систем пресной воды, насосов, фильтрации и судовых санузлов. Все соединения выполняются с расчетом на длительную эксплуатацию и удобство обслуживания.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 2.6 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Освещение и подсветка">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Освещение и подсветка</h3>
+                  <div class="service-subcategory-text">
+                    <p>Палубное, интерьерное, навигационное и подводное освещение. Коммутация и защита выполнены так, чтобы освещение работало стабильно и не создавало избыточной нагрузки на бортовую сеть.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 2.7 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Аудио и мультимедиа">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Аудио и мультимедиа</h3>
+                  <div class="service-subcategory-text">
+                    <p>Установка морских аудиосистем, усилителей и зонального управления с корректной интеграцией в электросистему судна. Система работает без помех и не влияет на стабильность питания.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 2.8 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Интеграция и модернизация существующих систем">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Интеграция и модернизация существующих систем</h3>
+                  <div class="service-subcategory-text">
+                    <p>Доработка ранее установленного оборудования, исправление ошибок предыдущего монтажа и приведение систем в логичное и обслуживаемое состояние без избыточных переделок.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Раздел 3: Диагностика технического состояния -->
+          <section id="service3" class="service-section">
+            <div class="service-section-header">
+              <h2 class="service-section-title">Диагностика технического состояния</h2>
+              <div class="service-section-icon">
+                <i class="fas fa-search"></i>
+              </div>
+            </div>
+
+            <div class="service-subcategories">
+              <!-- Подраздел 3.1 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Комплексная диагностика судна и всех ключевых систем">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Комплексная диагностика судна и всех ключевых систем</h3>
+                  <div class="service-subcategory-text">
+                    <p>Проверяется двигатель, электросистема, гидравлика, водяные магистрали, навигация и вспомогательное оборудование. Клиент получает объективную картину состояния судна с пониманием приоритетов и последовательности дальнейших действий.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 3.2 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Диагностика двигателя и системы охлаждения">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Диагностика двигателя и системы охлаждения</h3>
+                  <div class="service-subcategory-text">
+                    <p>Оценивается работа двигателя, топливной системы, датчиков и системы охлаждения, включая крыльчатку, помпу, водяной насос и термостаты. Выявляются причины перегрева, нестабильной работы и потери мощности до возникновения серьезных повреждений.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 3.3 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Диагностика электрики и энергосистемы">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Диагностика электрики и энергосистемы</h3>
+                  <div class="service-subcategory-text">
+                    <p>Проверяется состояние аккумуляторов, зарядки, распределения нагрузки, защит и соединений. Выявляются утечки тока, просадки напряжения и нестабильные контакты. Устраняется причина проблемы, а не ее последствия.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 3.4 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Диагностика рулевого управления и гидравлических систем">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Диагностика рулевого управления и гидравлических систем</h3>
+                  <div class="service-subcategory-text">
+                    <p>Оценивается состояние рулевых механизмов, магистралей, шлангов, цилиндров и насосов. Контролируются люфты, давление и герметичность. Приоритетом является управляемость и безопасность движения.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 3.5 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Диагностика навигации и систем связи">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Диагностика навигации и систем связи</h3>
+                  <div class="service-subcategory-text">
+                    <p>Проверяется корректность показаний, работа датчиков, стабильность сети и совместимость оборудования. Навигационные системы приводятся в состояние, при котором они работают предсказуемо и не требуют постоянной перенастройки.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Раздел 4: Помощь в покупке и подборе -->
+          <section id="service4" class="service-section">
+            <div class="service-section-header">
+              <h2 class="service-section-title">Помощь в покупке и подборе</h2>
+              <div class="service-section-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+            </div>
+
+            <div class="service-subcategories">
+              <!-- Подраздел 4.1 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Осмотр-диагностика судна перед покупкой">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Осмотр-диагностика судна перед покупкой</h3>
+                  <div class="service-subcategory-text">
+                    <p>Проводится техническая проверка корпуса, двигателя, систем и оборудования. Оценивается реальное состояние, качество предыдущих работ и уровень обслуживания. Позволяет заранее понимать объем предстоящих работ и избегать неожиданных затрат.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 4.2 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Оценка будущих затрат и плана работ">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Оценка будущих затрат и плана работ</h3>
+                  <div class="service-subcategory-text">
+                    <p>Формируется понятный перечень обязательных и рекомендуемых работ с ориентиром по бюджету и приоритетам. Четко разделяется, что требуется выполнить сразу, а что допустимо планировать позже.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 4.3 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Проверка соответствия заявленным характеристикам">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Проверка соответствия заявленным характеристикам</h3>
+                  <div class="service-subcategory-text">
+                    <p>Сверяется комплектация, мощность, год выпуска и установленное оборудование с данными из объявления и документов. Исключаются расхождения между заявленным и фактическим состоянием.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 4.4 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Подбор судна под задачи владельца">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Подбор судна под задачи владельца</h3>
+                  <div class="service-subcategory-text">
+                    <p>Помощь в оценке класса, конфигурации, двигателя и компоновки исходя из реальных условий эксплуатации. Решения принимаются на основе задач, а не внешнего вида или описаний продавца.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 4.5 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Подбор оборудования и комплектации">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Подбор оборудования и комплектации</h3>
+                  <div class="service-subcategory-text">
+                    <p>Рекомендации по навигации, электросистемам, климату, освещению и безопасности под конкретное судно без навязывания брендов и избыточных решений.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Раздел 5: Консервация и сезонное обслуживание -->
+          <section id="service5" class="service-section">
+            <div class="service-section-header">
+              <h2 class="service-section-title">Консервация и сезонное обслуживание</h2>
+              <div class="service-section-icon">
+                <i class="fas fa-snowflake"></i>
+              </div>
+            </div>
+
+            <div class="service-subcategories">
+              <!-- Подраздел 5.1 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Консервация перед хранением">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Консервация перед хранением</h3>
+                  <div class="service-subcategory-text">
+                    <p>Подготовка двигателя, топливной системы, системы охлаждения, водяных магистралей, электрики и установленного оборудования к хранению. Работы выполняются по проверенным схемам с сохранением ресурса техники.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 5.2 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Расконсервация и ввод в эксплуатацию">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Расконсервация и ввод в эксплуатацию</h3>
+                  <div class="service-subcategory-text">
+                    <p>Проверка всех систем, контроль запуска и устранение типовых последствий хранения. Техника подготавливается к штатной эксплуатации без рисков для двигателя и оборудования.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 5.3 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Сезонное регламентное обслуживание">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Сезонное регламентное обслуживание</h3>
+                  <div class="service-subcategory-text">
+                    <p>Обслуживание по моточасам и состоянию узлов. Проверка помп, крыльчаток, фильтров, ремней, крепежа и соединений для стабильной работы в течение сезона. При необходимости составляется индивидуальный план сезонных работ под конкретное судно и условия эксплуатации.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Раздел 6: Ремонт гидроциклов -->
+          <section id="service6" class="service-section">
+            <div class="service-section-header">
+              <h2 class="service-section-title">Ремонт гидроциклов</h2>
+              <div class="service-section-icon">
+                <i class="fas fa-water"></i>
+              </div>
+            </div>
+
+            <div class="service-subcategories">
+              <!-- Подраздел 6.1 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Плановое техническое обслуживание и сезонная подготовка">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Плановое техническое обслуживание и сезонная подготовка</h3>
+                  <div class="service-subcategory-text">
+                    <p>Работы выполняются по регламенту производителя с учетом условий эксплуатации. Проверяются системы охлаждения, впуска, топливная часть, электроника и датчики. Цель обеспечить стабильную работу без перегрева, ошибок и внезапных отказов в течение сезона.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 6.2 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Диагностика и ремонт двигателя гидроцикла">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Диагностика и ремонт двигателя гидроцикла</h3>
+                  <div class="service-subcategory-text">
+                    <p>При потере тяги, нестабильной работе, вибрациях, ошибках или посторонних звуках сначала определяется фактическая причина неисправности. После этого согласуется перечень работ и стоимость. Клиент заранее понимает ожидаемый результат.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 6.3 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Обслуживание и ремонт водометной части">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Обслуживание и ремонт водометной части</h3>
+                  <div class="service-subcategory-text">
+                    <p>Проверяется состояние узлов, износ деталей, герметичность соединений, работа подшипников и уплотнений. Устраняются причины кавитации, вибраций и снижения эффективности для восстановления нормальной тяги и ресурса.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 6.4 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Работы после нештатных ситуаций и неправильной эксплуатации">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Работы после нештатных ситуаций и неправильной эксплуатации</h3>
+                  <div class="service-subcategory-text">
+                    <p>Восстановление после перегрева, попадания воды, длительного простоя, использования некачественного топлива или нарушений условий хранения. Устраняются последствия, которые часто проявляются не сразу.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 6.5 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Подготовка к хранению и ввод в сезон">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Подготовка к хранению и ввод в сезон</h3>
+                  <div class="service-subcategory-text">
+                    <p>Консервация гидроцикла перед межсезоньем и расконсервация перед началом эксплуатации с проверкой всех рабочих параметров. Гидроцикл возвращается в эксплуатацию без дополнительных рисков и повторных обращений.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 6.6 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Контроль состояния и рекомендации по эксплуатации">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Контроль состояния и рекомендации по эксплуатации</h3>
+                  <div class="service-subcategory-text">
+                    <p>По итогам работ клиент получает объективную оценку состояния, остаточного ресурса ключевых узлов и рекомендации по дальнейшему обслуживанию.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Раздел 7: Иные услуги -->
+          <section id="service7" class="service-section">
+            <div class="service-section-header">
+              <h2 class="service-section-title">Иные услуги</h2>
+              <div class="service-section-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+            </div>
+
+            <div class="service-subcategories">
+              <!-- Подраздел 7.1 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Подготовка к транспортировке и работы после перевозки">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Подготовка к транспортировке и работы после перевозки</h3>
+                  <div class="service-subcategory-text">
+                    <p>Снятие и фиксация оборудования при необходимости, контроль состояния узлов после доставки, сборка и проверка работоспособности. Исключается появление неисправностей, связанных с транспортировкой.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 7.2 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Ввод в эксплуатацию после покупки или перевозки">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Ввод в эксплуатацию после покупки или перевозки</h3>
+                  <div class="service-subcategory-text">
+                    <p>Проверка всех систем после смены локации или владельца, контроль запусков и настройка оборудования. Техника приводится в рабочее состояние без накопления скрытых проблем.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 7.3 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Разборка и сборка оборудования">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Разборка и сборка оборудования</h3>
+                  <div class="service-subcategory-text">
+                    <p>Аккуратный демонтаж навигации, аудиосистем, освещения и дополнительного оборудования при перевозке, хранении или доработках. Обратная сборка с проверкой корректности подключения и работы.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 7.4 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Устранение последствий некорректного монтажа">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Устранение последствий некорректного монтажа</h3>
+                  <div class="service-subcategory-text">
+                    <p>Исправление ошибок предыдущих установок, неправильной коммутации, перегруженных цепей и временных решений. Системы приводятся в логичное и обслуживаемое состояние без полной переделки судна.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 7.5 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Подготовка судна к продаже">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Подготовка судна к продаже</h3>
+                  <div class="service-subcategory-text">
+                    <p>Техническая проверка и устранение критичных замечаний с приведением систем в рабочее состояние. Выполняются только работы, повышающие ликвидность и не вводящие будущего владельца в заблуждение.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 7.6 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Техническое сопровождение при смене условий эксплуатации">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Техническое сопровождение при смене условий эксплуатации</h3>
+                  <div class="service-subcategory-text">
+                    <p>Адаптация судна под новую акваторию, климат или режим использования. Корректировка систем выполняется без избыточных работ и лишних затрат.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Подраздел 7.7 -->
+              <div class="service-subcategory">
+                <div class="service-subcategory-image">
+                  <img src="assets/Фото будет позже.png" alt="Консультации и технические заключения">
+                </div>
+                <div class="service-subcategory-content">
+                  <h3 class="service-subcategory-title">Консультации и технические заключения</h3>
+                  <div class="service-subcategory-text">
+                    <p>Ответы на конкретные технические вопросы, оценка целесообразности работ и второе мнение по сложным ситуациям для принятия взвешенных решений.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Кнопка связи в конце страницы -->
+          <div class="services-cta">
+            <div class="services-cta-content">
+              <h3 class="services-cta-title">Нужна конкретная услуга или консультация?</h3>
+              <p class="services-cta-text">Оставьте заявку и мы свяжемся с вами для обсуждения деталей и расчета стоимости работ</p>
+              <button class="btn btn--primary services-cta-btn js-services-callback">
+                <i class="fas fa-phone"></i>
+                Получить консультацию
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== ФУТЕР ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      
+      <!-- Колонка 1: Логотип и копирайт -->
+      <div class="footer-col">
+        <a class="logo" href="index.html">
+          <img src="assets/logo2.png" alt="Boost Marine" width="180" height="47">
+        </a>
+        <div class="copyright">© 2025 BOOST MARINE</div>
+      </div>
+
+      <!-- Колонка 2: Информация -->
+      <div class="footer-col">
+        <div class="title">Информация</div>
+        <div class="links-list">
+          <a href="index.html#works" class="link">Наши работы</a>
+          <a href="index.html#team" class="link">Команда</a>
+          <a href="services-detail.html" class="link active">Услуги</a>
+          <a href="index.html#equipment" class="link">Оборудование и запчасти</a>
+          <a href="index.html#contacts" class="link">Контакты</a>
+          <a href="index.html#onsite" class="link">Выездная работа</a>
+          <a href="https://t.me/boostmarine" class="link" target="_blank">Наш Telegram канал</a>
+        </div>
+      </div>
+
+      <!-- Колонка 3: Услуги -->
+      <div class="footer-col">
+        <div class="title">Услуги</div>
+        <div class="links-list">
+          <a href="#service1" class="link">Ремонт и техническое обслуживание</a>
+          <a href="#service2" class="link">Дооснащение, модернизация и инженерные системы</a>
+          <a href="#service3" class="link">Диагностика технического состояния</a>
+          <a href="#service4" class="link">Помощь в покупке и подборе</a>
+          <a href="#service5" class="link">Консервация и сезонное обслуживание</a>
+          <a href="#service6" class="link">Ремонт гидроциклов</a>
+          <a href="#service7" class="link">Иные услуги</a>
+        </div>
+      </div>
+
+      <!-- Колонка 4: Социальные сети и кнопка -->
+      <div class="footer-col">
+        <div class="socials">
+          <a href="https://wa.me/123456789" target="_blank" class="social-icon">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://t.me/boostmarine" target="_blank" class="social-icon">
+            <i class="fab fa-telegram"></i>
+          </a>
+          <a href="https://www.youtube.com/@boostmarine" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://instagram.com/boostmarine" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+
+        <button type="button" class="btn btn--callback js-footer-callback">
+          Обратный звонок
+        </button>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <!-- Основной скрипт -->
+  <script src="script.js"></script>
+  
+  <!-- Скрипт для страницы услуг -->
+  <script src="services-detail.js"></script>
+  
+</body>
+</html>

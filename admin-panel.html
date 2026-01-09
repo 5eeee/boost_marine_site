@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админ-панель | Boost Marine</title>
+  
+  <!-- Фонт Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Иконки FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Стили админ-панели -->
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+  
+  <!-- ==================== АДМИН-ПАНЕЛЬ ==================== -->
+  <div class="admin-panel">
+    <!-- Шапка админ-панели -->
+    <header class="admin-header">
+      <div class="admin-header__inner">
+        <div class="admin-header__left">
+          <h1 class="admin-header__title">
+            <i class="fas fa-cogs"></i>
+            Панель управления Boost Marine
+          </h1>
+          <div class="admin-header__user">
+            <i class="fas fa-user-circle"></i>
+            <span>Администратор</span>
+          </div>
+        </div>
+        
+        <button class="admin-logout" id="adminLogout">
+          <i class="fas fa-sign-out-alt"></i>
+          Выйти
+        </button>
+      </div>
+    </header>
+    
+    <!-- Основное содержимое -->
+    <main class="admin-main">
+      <div class="admin-container">
+        <!-- Боковое меню -->
+        <nav class="admin-nav">
+          <div class="admin-nav__header">
+            <div class="admin-nav__logo">
+              <img src="../assets/logo2.png" alt="Boost Marine" width="140">
+            </div>
+            <div class="admin-nav__version">v1.0</div>
+          </div>
+          
+          <ul class="admin-nav__list">
+            <li class="admin-nav__item active" data-tab="dashboard">
+              <a href="#dashboard" class="admin-nav__link">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Дашборд</span>
+              </a>
+            </li>
+            
+            <li class="admin-nav__item" data-tab="works">
+              <a href="#works" class="admin-nav__link">
+                <i class="fas fa-images"></i>
+                <span>Наши работы</span>
+                <span class="admin-nav__badge">12</span>
+              </a>
+            </li>
+            
+            <li class="admin-nav__item" data-tab="services">
+              <a href="#services" class="admin-nav__link">
+                <i class="fas fa-tools"></i>
+                <span>Услуги</span>
+                <span class="admin-nav__badge">7</span>
+              </a>
+            </li>
+            
+            <li class="admin-nav__item" data-tab="team">
+              <a href="#team" class="admin-nav__link">
+                <i class="fas fa-users"></i>
+                <span>Команда</span>
+                <span class="admin-nav__badge">6</span>
+              </a>
+            </li>
+            
+            <li class="admin-nav__item" data-tab="equipment">
+              <a href="#equipment" class="admin-nav__link">
+                <i class="fas fa-cog"></i>
+                <span>Оборудование</span>
+              </a>
+            </li>
+            
+            <li class="admin-nav__item" data-tab="requests">
+              <a href="#requests" class="admin-nav__link">
+                <i class="fas fa-envelope"></i>
+                <span>Заявки</span>
+                <span class="admin-nav__badge new">3</span>
+              </a>
+            </li>
+            
+            <li class="admin-nav__item" data-tab="settings">
+              <a href="#settings" class="admin-nav__link">
+                <i class="fas fa-sliders-h"></i>
+                <span>Настройки</span>
+              </a>
+            </li>
+          </ul>
+          
+          <div class="admin-nav__footer">
+            <div class="admin-nav__help">
+              <i class="fas fa-question-circle"></i>
+              <span>Помощь</span>
+            </div>
+          </div>
+        </nav>
+        
+        <!-- Основной контент -->
+        <div class="admin-content">
+          <!-- Дашборд -->
+          <div class="admin-tab active" id="tab-dashboard">
+            <div class="admin-tab-header">
+              <h2 class="admin-tab-title">Дашборд</h2>
+              <div class="admin-tab-date">
+                <i class="fas fa-calendar-alt"></i>
+                <span id="currentDate">Сегодня, 20 мая 2024</span>
+              </div>
+            </div>
+            
+            <div class="dashboard-stats">
+              <div class="stat-card">
+                <div class="stat-card__icon stat-card__icon--blue">
+                  <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <div class="stat-card__content">
+                  <div class="stat-card__value">24</div>
+                  <div class="stat-card__label">Новых заявок</div>
+                  <div class="stat-card__change positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>12% за неделю</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="stat-card">
+                <div class="stat-card__icon stat-card__icon--green">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-card__content">
+                  <div class="stat-card__value">156</div>
+                  <div class="stat-card__label">Выполненных работ</div>
+                  <div class="stat-card__change positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>8% за месяц</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="stat-card">
+                <div class="stat-card__icon stat-card__icon--orange">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <div class="stat-card__content">
+                  <div class="stat-card__value">2,847</div>
+                  <div class="stat-card__label">Посетителей сайта</div>
+                  <div class="stat-card__change positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>15% за месяц</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="stat-card">
+                <div class="stat-card__icon stat-card__icon--purple">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-card__content">
+                  <div class="stat-card__value">6</div>
+                  <div class="stat-card__label">Членов команды</div>
+                  <div class="stat-card__change">
+                    <span>Полный состав</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="dashboard-content">
+              <div class="dashboard-section">
+                <div class="dashboard-section__header">
+                  <h3 class="dashboard-section__title">Последние заявки</h3>
+                  <a href="#requests" class="dashboard-section__link">Все заявки</a>
+                </div>
+                
+                <div class="table-responsive">
+                  <table class="admin-table">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Имя</th>
+                        <th>Телефон</th>
+                        <th>Тип услуги</th>
+                        <th>Дата</th>
+                        <th>Статус</th>
+                        <th>Действия</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#00124</td>
+                        <td>Иван Петров</td>
+                        <td>+7 (912) 345-67-89</td>
+                        <td>Ремонт двигателя</td>
+                        <td>20.05.2024</td>
+                        <td><span class="status-badge status-new">Новая</span></td>
+                        <td>
+                          <button class="btn-action btn-view" title="Просмотр">
+                            <i class="fas fa-eye"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#00123</td>
+                        <td>Мария Сидорова</td>
+                        <td>+7 (987) 654-32-10</td>
+                        <td>Диагностика</td>
+                        <td>19.05.2024</td>
+                        <td><span class="status-badge status-inwork">В работе</span></td>
+                        <td>
+                          <button class="btn-action btn-view" title="Просмотр">
+                            <i class="fas fa-eye"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#00122</td>
+                        <td>Алексей Иванов</td>
+                        <td>+7 (905) 123-45-67</td>
+                        <td>Техническое обслуживание</td>
+                        <td>18.05.2024</td>
+                        <td><span class="status-badge status-completed">Завершена</span></td>
+                        <td>
+                          <button class="btn-action btn-view" title="Просмотр">
+                            <i class="fas fa-eye"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+              <div class="dashboard-section">
+                <div class="dashboard-section__header">
+                  <h3 class="dashboard-section__title">Быстрые действия</h3>
+                </div>
+                
+                <div class="quick-actions">
+                  <button class="quick-action-btn" data-action="add-work">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Добавить работу</span>
+                  </button>
+                  
+                  <button class="quick-action-btn" data-action="add-service">
+                    <i class="fas fa-tools"></i>
+                    <span>Добавить услугу</span>
+                  </button>
+                  
+                  <button class="quick-action-btn" data-action="add-team">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Добавить в команду</span>
+                  </button>
+                  
+                  <button class="quick-action-btn" data-action="view-stats">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Статистика сайта</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Наши работы -->
+          <div class="admin-tab" id="tab-works">
+            <div class="admin-tab-header">
+              <h2 class="admin-tab-title">Управление работами</h2>
+              <button class="btn btn--primary" id="addWorkBtn">
+                <i class="fas fa-plus"></i>
+                Добавить работу
+              </button>
+            </div>
+            
+            <div class="admin-actions">
+              <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Поиск работ..." id="worksSearch">
+              </div>
+              
+              <div class="filter-box">
+                <select id="worksFilter">
+                  <option value="all">Все работы</option>
+                  <option value="yachts">Яхты</option>
+                  <option value="boats">Катера</option>
+                  <option value="jetskis">Гидроциклы</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="works-list" id="worksList">
+              <!-- Работы будут загружаться динамически -->
+              <div class="works-empty">
+                <i class="fas fa-images"></i>
+                <p>Работы еще не добавлены</p>
+                <button class="btn btn--primary" id="addFirstWorkBtn">
+                  <i class="fas fa-plus"></i>
+                  Добавить первую работу
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Услуги -->
+          <div class="admin-tab" id="tab-services">
+            <div class="admin-tab-header">
+              <h2 class="admin-tab-title">Управление услугами</h2>
+              <button class="btn btn--primary" id="addServiceBtn">
+                <i class="fas fa-plus"></i>
+                Добавить услугу
+              </button>
+            </div>
+            
+            <div class="services-list" id="servicesList">
+              <!-- Услуги будут загружаться динамически -->
+              <div class="services-grid-admin">
+                <div class="service-card-admin">
+                  <div class="service-card-admin__header">
+                    <h3 class="service-card-admin__title">Ремонт и техническое обслуживание</h3>
+                    <div class="service-card-admin__actions">
+                      <button class="btn-action btn-edit" title="Редактировать">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn-action btn-delete" title="Удалить">
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="service-card-admin__content">
+                    <p>Полный цикл обслуживания водной техники. Плановые регламентные работы, ремонт любой сложности...</p>
+                    <div class="service-card-admin__meta">
+                      <span class="meta-item">
+                        <i class="fas fa-list-ol"></i>
+                        Подкатегорий: 6
+                      </span>
+                      <span class="meta-item">
+                        <i class="fas fa-eye"></i>
+                        Просмотры: 124
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Другие услуги будут аналогично -->
+              </div>
+            </div>
+          </div>
+          
+          <!-- Команда -->
+          <div class="admin-tab" id="tab-team">
+            <div class="admin-tab-header">
+              <h2 class="admin-tab-title">Управление командой</h2>
+              <button class="btn btn--primary" id="addTeamMemberBtn">
+                <i class="fas fa-plus"></i>
+                Добавить члена команды
+              </button>
+            </div>
+            
+            <div class="team-list" id="teamList">
+              <!-- Команда будет загружаться динамически -->
+              <div class="team-grid-admin">
+                <div class="team-member-admin">
+                  <div class="team-member-admin__photo">
+                    <img src="../assets/Команда 1.png" alt="Миша">
+                    <div class="team-member-admin__photo-actions">
+                      <button class="btn-action btn-change-photo" title="Сменить фото">
+                        <i class="fas fa-camera"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="team-member-admin__info">
+                    <h3 class="team-member-admin__name">Миша</h3>
+                    <div class="team-member-admin__actions">
+                      <button class="btn-action btn-edit" title="Редактировать">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn-action btn-delete" title="Удалить">
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Другие члены команды будут аналогично -->
+              </div>
+            </div>
+          </div>
+          
+          <!-- Оборудование -->
+          <div class="admin-tab" id="tab-equipment">
+            <div class="admin-tab-header">
+              <h2 class="admin-tab-title">Управление оборудованием</h2>
+              <button class="btn btn--primary" id="addEquipmentBtn">
+                <i class="fas fa-plus"></i>
+                Добавить оборудование
+              </button>
+            </div>
+            
+            <div class="equipment-categories-admin">
+              <div class="equipment-category-admin">
+                <div class="equipment-category-admin__header">
+                  <div class="equipment-category-admin__icon">
+                    <i class="fas fa-engine"></i>
+                  </div>
+                  <h3 class="equipment-category-admin__title">Для двигателя</h3>
+                  <div class="equipment-category-admin__actions">
+                    <button class="btn-action btn-edit" title="Редактировать">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-action btn-add-item" title="Добавить товар">
+                      <i class="fas fa-plus-circle"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="equipment-category-admin__content">
+                  <p>Оригинальные запчасти для двигателей Volvo, Yanmar, Mercury и других производителей.</p>
+                  <div class="equipment-category-admin__meta">
+                    <span class="meta-item">
+                      <i class="fas fa-boxes"></i>
+                      Товаров: 24
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Другие категории оборудования будут аналогично -->
+            </div>
+          </div>
+          
+          <!-- Заявки -->
+          <div class="admin-tab" id="tab-requests">
+            <div class="admin-tab-header">
+              <h2 class="admin-tab-title">Заявки от клиентов</h2>
+              <div class="requests-filter">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="new">Новые</button>
+                <button class="filter-btn" data-filter="inwork">В работе</button>
+                <button class="filter-btn" data-filter="completed">Завершённые</button>
+              </div>
+            </div>
+            
+            <div class="requests-list" id="requestsList">
+              <!-- Заявки будут загружаться динамически -->
+            </div>
+          </div>
+          
+          <!-- Настройки -->
+          <div class="admin-tab" id="tab-settings">
+            <div class="admin-tab-header">
+              <h2 class="admin-tab-title">Настройки сайта</h2>
+            </div>
+            
+            <div class="settings-tabs">
+              <div class="settings-tabs-nav">
+                <button class="settings-tab-btn active" data-tab="general">Основные</button>
+                <button class="settings-tab-btn" data-tab="contacts">Контакты</button>
+                <button class="settings-tab-btn" data-tab="seo">SEO</button>
+                <button class="settings-tab-btn" data-tab="social">Соцсети</button>
+                <button class="settings-tab-btn" data-tab="backup">Резервные копии</button>
+              </div>
+              
+              <div class="settings-tabs-content">
+                <div class="settings-tab active" id="settings-general">
+                  <form class="settings-form" id="generalSettingsForm">
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="siteTitle">Название сайта</label>
+                        <input type="text" id="siteTitle" name="site_title" value="Boost Marine">
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="siteSlogan">Слоган</label>
+                        <input type="text" id="siteSlogan" name="site_slogan" value="Профессиональный ремонт яхт, катеров и гидроциклов">
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="siteDescription">Описание сайта</label>
+                      <textarea id="siteDescription" name="site_description" rows="3">Boost Marine — команда профессионалов с многолетним опытом работы в сфере ремонта и обслуживания водной техники. Мы предлагаем полный спектр услуг: от диагностики до капитального ремонта.</textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="siteLogo">Логотип сайта</label>
+                      <div class="file-upload">
+                        <div class="file-upload-preview">
+                          <img src="../assets/logo2.png" alt="Текущий логотип" id="logoPreview">
+                        </div>
+                        <div class="file-upload-controls">
+                          <button type="button" class="btn btn--secondary" id="changeLogoBtn">
+                            <i class="fas fa-upload"></i>
+                            Сменить логотип
+                          </button>
+                          <input type="file" id="siteLogo" name="site_logo" accept="image/*" hidden>
+                          <div class="file-upload-info">
+                            <p>Рекомендуемый размер: 180×47px</p>
+                            <p>Формат: PNG, JPG, SVG</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="siteFavicon">Favicon</label>
+                      <div class="file-upload">
+                        <div class="file-upload-preview">
+                          <img src="../assets/favicon.ico" alt="Текущий favicon" id="faviconPreview">
+                        </div>
+                        <div class="file-upload-controls">
+                          <button type="button" class="btn btn--secondary" id="changeFaviconBtn">
+                            <i class="fas fa-upload"></i>
+                            Сменить favicon
+                          </button>
+                          <input type="file" id="siteFavicon" name="site_favicon" accept=".ico,image/x-icon" hidden>
+                          <div class="file-upload-info">
+                            <p>Размер: 32×32px</p>
+                            <p>Формат: ICO</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn--primary">
+                        <i class="fas fa-save"></i>
+                        Сохранить изменения
+                      </button>
+                      <button type="button" class="btn btn--secondary" id="resetGeneralSettings">
+                        <i class="fas fa-undo"></i>
+                        Сбросить
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                
+                <div class="settings-tab" id="settings-contacts">
+                  <!-- Настройки контактов будут здесь -->
+                </div>
+                
+                <!-- Другие вкладки настроек будут аналогично -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Футер админ-панели -->
+    <footer class="admin-footer">
+      <div class="admin-footer__inner">
+        <div class="admin-footer__left">
+          <p>© 2024 Boost Marine Admin Panel | v1.0.0</p>
+        </div>
+        <div class="admin-footer__right">
+          <p>Последнее обновление: 20.05.2024 14:30</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==================== МОДАЛЬНЫЕ ОКНА ==================== -->
+  
+  <!-- Модальное окно добавления работы -->
+  <div class="modal" id="addWorkModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__container">
+      <div class="modal__header">
+        <h3 class="modal__title">Добавить работу</h3>
+        <button class="modal__close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal__content">
+        <form id="addWorkForm">
+          <div class="form-group">
+            <label for="workTitle">Название работы *</label>
+            <input type="text" id="workTitle" name="work_title" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="workCategory">Категория *</label>
+            <select id="workCategory" name="work_category" required>
+              <option value="">Выберите категорию</option>
+              <option value="yachts">Яхты</option>
+              <option value="boats">Катера</option>
+              <option value="jetskis">Гидроциклы</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="workDescription">Описание *</label>
+            <textarea id="workDescription" name="work_description" rows="4" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="workImage">Изображение *</label>
+            <div class="file-upload">
+              <div class="file-upload-area" id="workImageUpload">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Перетащите изображение или кликните для выбора</p>
+                <p class="file-upload-hint">Рекомендуемый размер: 1200×800px</p>
+              </div>
+              <input type="file" id="workImage" name="work_image" accept="image/*" required hidden>
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn--primary">
+              <i class="fas fa-plus"></i>
+              Добавить работу
+            </button>
+            <button type="button" class="btn btn--secondary modal__close-btn">
+              Отмена
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Модальное окно добавления услуги -->
+  <div class="modal" id="addServiceModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__container">
+      <div class="modal__header">
+        <h3 class="modal__title">Добавить услугу</h3>
+        <button class="modal__close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal__content">
+        <form id="addServiceForm">
+          <!-- Форма будет аналогична добавлению работы -->
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Модальное окно добавления члена команды -->
+  <div class="modal" id="addTeamMemberModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__container">
+      <div class="modal__header">
+        <h3 class="modal__title">Добавить члена команды</h3>
+        <button class="modal__close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal__content">
+        <form id="addTeamMemberForm">
+          <!-- Форма будет аналогична добавлению работы -->
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Скрипты -->
+  <script src="admin.js"></script>
+</body>
+</html>
