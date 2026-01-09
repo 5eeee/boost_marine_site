@@ -127,7 +127,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(135deg, #FF6B35, #FF8C42);
+  background: linear-gradient(135deg, #0088cc, #0088cc);
   color: var(--dark-gray);
   text-decoration: none;
   padding: 12px 20px;
@@ -139,7 +139,7 @@ body {
 .telegram-link:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
-  background: linear-gradient(135deg, #FF8C42, #FF6B35);
+  background: linear-gradient(135deg, #0088cc, #0088cc);
 }
 
 .telegram-link i {
